@@ -13,7 +13,7 @@ const config = {
   },
   plugins: [new HtmlWebpackPlugin({ template: "./public/index.html" })],
   devServer: {
-    port: 8080,
+    port: 3000,
     static: path.resolve(__dirname, "public/dist"),
     hot: true,
   },
