@@ -9,14 +9,16 @@ const config = {
   entry: "./src/index.js",
   output: {
     filename: "main.[hash].js",
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "public/dist"),
   },
-  plugins: [new HtmlWebpackPlugin({ template: "./src/index.html" })],
+  plugins: [new HtmlWebpackPlugin({ template: "./public/index.html" })],
   devServer: {
     port: 8080,
-    static: path.resolve(__dirname, "dist"),
+    static: path.resolve(__dirname, "public/dist"),
     hot: true,
   },
+  infrastructureLogging: { level: 'error' },
+  stats: 'minimal',
   mode: "development",
   devtool: "eval-cheap-source-map",
   module: {
